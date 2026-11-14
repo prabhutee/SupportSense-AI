@@ -20,6 +20,9 @@ from nltk.corpus import stopwords, wordnet
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
 
+nltk.download("wordnet", quiet=True)
+nltk.download("omw-1.4", quiet=True)
+
 # Common English contractions mapping for consistent normalization
 CONTRACTIONS_MAP = {
     "can't": "can not",
@@ -75,8 +78,11 @@ def _build_banking_stopwords() -> set:
 
 
 BANKING_STOPWORDS = _build_banking_stopwords()
-LEMMATIZER = WordNetLemmatizer()
 
+# Download WordNet data if not available
+nltk.download("wordnet", quiet=True)
+
+LEMMATIZER = WordNetLemmatizer()
 
 def expand_contractions(text: str) -> str:
     """Expands common contractions (e.g., 'can't' -> 'can not')."""
