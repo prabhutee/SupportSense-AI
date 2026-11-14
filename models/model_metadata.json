@@ -1,0 +1,28 @@
+{
+  "sklearn_version": "1.9.1",
+  "random_seed": 42,
+  "vectorizer": {
+    "type": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 10000,
+    "sublinear_tf": true,
+    "vocabulary_size": 10000
+  },
+  "logistic_regression_params": {
+    "C": 10.0,
+    "max_iter": 1000,
+    "solver": "lbfgs"
+  },
+  "linear_svm_params": {
+    "C": 0.5,
+    "calibration_method": "sigmoid (Platt scaling)",
+    "cv": 3
+  },
+  "preprocessing": {
+    "mode": "extended",
+    "negation_and_intent_words_preserved": true
+  }
+}

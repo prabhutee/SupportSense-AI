@@ -1,0 +1,458 @@
+[
+  {
+    "kb_id": "KB-CARD-001",
+    "title": "Immediate Protocol for Lost, Stolen, or Compromised Cards",
+    "category_group": "Card Services",
+    "summary": "Step-by-step security actions required when a payment card is lost, stolen, or compromised.",
+    "relevant_intents": [
+      "lost_or_stolen_card",
+      "compromised_card",
+      "card_swallowed"
+    ],
+    "tags": ["lost card", "stolen card", "compromised", "freeze card", "fraud prevention", "emergency"],
+    "content": "If your debit or credit card is misplaced, stolen, swallowed by an ATM, or suspected of being compromised, immediate containment is required to prevent unauthorized transactions. You can immediately freeze your card directly from the mobile application under Card Settings. Freezing halts all contactless, online, and ATM transactions instantly. If the card cannot be recovered or details have been exposed, permanently terminate the card and request a replacement. Our security systems continuously monitor for unusual activity, and any unauthorized transactions reported promptly will be routed to our fraud resolution desk.",
+    "resolution_steps": [
+      "Open your banking app, navigate to 'Cards', and toggle 'Freeze Card' immediately.",
+      "Review your recent transaction feed for any unrecognized pending or settled debits.",
+      "If the card is permanently lost or stolen, select 'Replace Card' to void the current card and order a replacement.",
+      "If an ATM has swallowed the card, do not attempt to pry the machine; freeze the card immediately and report the ATM location."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Generic guidance for standard banking operations. Specific reissuance timelines and fees depend on account tier.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-CARD-002",
+    "title": "Card Delivery Tracking, Reissuance, and Activation Guide",
+    "category_group": "Card Services",
+    "summary": "Procedures for ordering physical cards, tracking standard dispatch, and completing initial card activation.",
+    "relevant_intents": [
+      "activate_my_card",
+      "card_arrival",
+      "card_delivery_estimate",
+      "card_about_to_expire",
+      "get_physical_card",
+      "order_physical_card",
+      "getting_spare_card"
+    ],
+    "tags": ["activation", "delivery tracking", "card order", "expiration", "physical card", "spare card"],
+    "content": "Physical cards are dispatched via standard postal carrier following an initial order or automatic expiry renewal. Delivery typically takes standard business days depending on destination address and postal transit. Once your card arrives, it must be activated before contactless or chip-and-PIN transactions will succeed. You can activate your card inside the mobile app by entering the 16-digit card number or last 4 digits and CVV. Cards nearing expiration will be automatically renewed and dispatched to your registered residential address prior to the expiry month.",
+    "resolution_steps": [
+      "Track your dispatched card status under 'Cards' > 'Track Delivery' in the app.",
+      "Verify that your registered mailing address in 'Personal Details' is up to date.",
+      "Upon receiving the card, tap 'Activate Card' in the app and confirm the requested security digits.",
+      "Perform a chip-and-PIN transaction (such as a balance inquiry or purchase) to complete chip initialization."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Standard card transit times and activation workflows. Replacement fees vary by institution.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-CARD-003",
+    "title": "Troubleshooting Declined Card Transactions and Terminal Errors",
+    "category_group": "Card Services",
+    "summary": "Diagnostic guide for point-of-sale card declines, contactless NFC failures, and chip read errors.",
+    "relevant_intents": [
+      "card_not_working",
+      "contactless_not_working",
+      "declined_card_payment",
+      "card_acceptance",
+      "visa_or_mastercard"
+    ],
+    "tags": ["declined card", "contactless failure", "chip error", "point of sale", "terminal"],
+    "content": "Card transactions may be declined at merchant terminals for several operational reasons: insufficient available funds, card security freezes, temporary offline terminal status, or exceeding daily contactless limits. Many regional payment networks mandate that after a certain cumulative contactless spending threshold, the chip must be physically inserted and authenticated with your 4-digit PIN to reset the contactless counter. Ensure that international usage and online purchase toggles are enabled in your security settings if transacting abroad.",
+    "resolution_steps": [
+      "Verify that the card is not frozen and that online/contactless toggles are enabled in the app.",
+      "Check that your available balance covers the transaction amount plus any incidental pre-authorizations.",
+      "If contactless fails, insert the card into the chip reader and enter your PIN to reset security counters.",
+      "Check merchant acceptance flags for Visa or Mastercard depending on your card issuer."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: General terminal troubleshooting. Does not bypass merchant-specific POS limitations.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-CARD-004",
+    "title": "Virtual and Disposable Virtual Cards Setup and Usage Limits",
+    "category_group": "Card Services",
+    "summary": "How to generate, utilize, and troubleshoot virtual cards and single-use disposable cards for secure ecommerce.",
+    "relevant_intents": [
+      "getting_virtual_card",
+      "get_disposable_virtual_card",
+      "virtual_card_not_working",
+      "disposable_card_limits"
+    ],
+    "tags": ["virtual card", "disposable card", "online shopping", "ecommerce", "spending limits"],
+    "content": "Virtual cards provide enhanced security for digital purchases without exposing your primary physical card number. Disposable virtual cards generate new card details automatically after each completed transaction, preventing recurring subscription billing or merchant data leaks. Each account tier has configured daily and monthly generation limits for disposable cards. If a virtual card transaction fails, verify whether the merchant runs a deferred authorization (which disposable cards may reject) or if the card limit has been reached.",
+    "resolution_steps": [
+      "Navigate to 'Cards' > 'Add New Card' and select 'Virtual' or 'Disposable Virtual'.",
+      "Copy the 16-digit virtual PAN, expiration date, and CVV for online checkout.",
+      "For recurring subscriptions (e.g., streaming services), use a multi-use virtual card rather than a disposable card.",
+      "Review virtual card spending limits in the card management section of your application."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Illustrative virtual card feature set. Subject to account limits.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-CARD-005",
+    "title": "PIN Reset, Blocked PIN Recovery, and ATM Swallowing Guide",
+    "category_group": "Card Services",
+    "summary": "Instructions for recovering a blocked card PIN, resetting security credentials, and handling retained cards.",
+    "relevant_intents": [
+      "pin_blocked",
+      "change_pin",
+      "card_swallowed"
+    ],
+    "tags": ["blocked pin", "change pin", "atm swallowed", "security reset", "credentials"],
+    "content": "Entering an incorrect PIN three consecutive times triggers an automatic security block to protect against unauthorized attempts. Depending on where the block occurred (at an ATM or a merchant POS terminal), unblocking can often be performed directly in your mobile app by verifying your identity with biometric authentication. If an ATM retains (swallows) your card due to timeout or mechanical failure, the card cannot be retrieved by branch staff for security reasons; freeze the card immediately and order a new one.",
+    "resolution_steps": [
+      "Open your banking app, go to 'Cards' > 'Security' > 'Unblock PIN'.",
+      "To view your current PIN, authenticate via FaceID/Fingerprint/Passcode and tap 'Reveal PIN'.",
+      "To change your PIN, locate an ATM supporting PIN services or update it via app settings if supported.",
+      "If your card was swallowed by an ATM, freeze it immediately and request an expedited replacement."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Standard banking credential recovery protocol.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-CARD-006",
+    "title": "Adding Cards to Digital Wallets (Apple Pay and Google Pay)",
+    "category_group": "Card Services",
+    "summary": "Step-by-step instructions for linking debit and virtual cards to Apple Wallet and Google Wallet.",
+    "relevant_intents": [
+      "apple_pay_or_google_pay",
+      "card_linking"
+    ],
+    "tags": ["apple pay", "google pay", "digital wallet", "nfc payment", "tokenization"],
+    "content": "You can tokenize both physical and multi-use virtual cards into Apple Pay or Google Wallet for secure contactless payments using your smartphone or wearable device. Tokenization replaces your actual card number with an encrypted device account number. Linking can be initiated directly from your banking app by selecting 'Add to Apple Wallet' or 'Add to GPay', or manually through the device's native Wallet app by scanning the card and confirming a one-time SMS or in-app push verification.",
+    "resolution_steps": [
+      "In the banking app, tap 'Cards', select the desired card, and tap 'Add to Apple Wallet' or 'Add to Google Pay'.",
+      "Follow on-screen device prompts and accept issuer terms and conditions.",
+      "If prompted for verification, select 'In-App Verification' or 'SMS One-Time Passcode'.",
+      "Ensure NFC is enabled in your device system settings before attempting in-store payments."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Device wallet integration guide. Requires supported hardware and OS versions.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TXN-001",
+    "title": "Resolving Failed, Declined, or Blocked Outbound Money Transfers",
+    "category_group": "Transfers & Payments",
+    "summary": "Guidance on why outgoing domestic and international bank transfers fail and how to rectify them.",
+    "relevant_intents": [
+      "failed_transfer",
+      "declined_transfer",
+      "beneficiary_not_allowed"
+    ],
+    "tags": ["failed transfer", "declined payment", "beneficiary error", "iban", "wire transfer"],
+    "content": "Outbound bank transfers may be declined or fail due to incorrect recipient routing information (IBAN, Sort Code, Routing Number, SWIFT/BIC), insufficient funds, sanctioned recipient institutions, or triggered fraud compliance rules. When a transfer fails, the funds are normally returned to your available balance immediately or within 1 to 3 business days depending on the intermediary clearing network. Check that the beneficiary name matches the account holder exactly to avoid automated payment rejections.",
+    "resolution_steps": [
+      "Review the transfer rejection notice in your transaction feed for specific error codes.",
+      "Verify the recipient account number, IBAN/BIC, and registered legal name.",
+      "Check your daily/monthly outbound transfer limits under Account Settings.",
+      "If the beneficiary is flagged as not allowed, confirm that the receiving jurisdiction is not restricted."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Generic payment routing guidelines. Clearing depends on payment rail (SEPA/Faster Payments/ACH/Wire).",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TXN-002",
+    "title": "Tracking Missing, Delayed, or Pending Bank Transfers",
+    "category_group": "Transfers & Payments",
+    "summary": "Understanding standard clearing windows, intermediary bank delays, and locating in-flight funds.",
+    "relevant_intents": [
+      "transfer_not_received_by_recipient",
+      "pending_transfer",
+      "transfer_timing"
+    ],
+    "tags": ["delayed transfer", "transfer not received", "pending transfer", "clearing time", "sepa", "swift"],
+    "content": "Transfer clearing times vary depending on the underlying payment network: instant rails (e.g., SEPA Instant, UK Faster Payments) typically settle in seconds, whereas standard domestic clearing takes 1-2 business days, and international SWIFT transfers take 3-5 business days. Weekends and national bank holidays do not count as processing days. If an in-flight transfer has not reached the recipient after the standard clearing window has elapsed, obtain a Transfer Confirmation (MT103 document) from your app to provide to the receiving bank's tracing department.",
+    "resolution_steps": [
+      "Check the status badge: 'Pending' means funds are clearing the payment network; 'Completed' means released to the receiving institution.",
+      "Calculate elapsed business days excluding weekends and national bank holidays.",
+      "Download the PDF Transfer Receipt / MT103 from the transaction details screen.",
+      "Advise the recipient to share the MT103 confirmation with their bank's payment operations team."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Indicative clearing windows. Actual transit times depend on correspondent banking chains.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TXN-003",
+    "title": "Incoming Transfers, Account Details, and Missing Inbound Deposits",
+    "category_group": "Transfers & Payments",
+    "summary": "How to retrieve your account routing details for incoming payments and trace missing inbound funds.",
+    "relevant_intents": [
+      "receiving_money",
+      "transfer_into_account",
+      "balance_not_updated_after_bank_transfer"
+    ],
+    "tags": ["incoming funds", "account details", "iban", "direct deposit", "missing deposit"],
+    "content": "To receive money via bank transfer, provide the sender with your exact account details found in your app profile: Account Number, Routing/Sort Code, IBAN, and SWIFT/BIC. If a sender claims funds were dispatched but your balance has not updated, verify that the sender entered your details accurately and check whether the sender's bank processed the transfer via an instant rail or standard batched clearing. Transfers sent with an omitted payment reference may be temporarily held in an unallocated clearing pool.",
+    "resolution_steps": [
+      "Find your official account details under 'Home' > 'Details' or 'Add Money' > 'Bank Transfer'.",
+      "Ensure the sender utilized your complete legal name and proper IBAN or routing number.",
+      "Request a payment receipt or transaction ID from the sending party to verify dispatch time.",
+      "If more than 3 business days have passed since dispatch, contact support with the sender's payment proof."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Inbound payment procedures. Processing subject to anti-money laundering review.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TXN-004",
+    "title": "Cancelling or Recalling Outbound Transfers",
+    "category_group": "Transfers & Payments",
+    "summary": "Procedures and limitations for recalling or cancelling domestic and international transfers.",
+    "relevant_intents": [
+      "cancel_transfer"
+    ],
+    "tags": ["cancel transfer", "recall payment", "stop payment", "transfer error"],
+    "content": "Once an electronic bank transfer has been submitted and cleared through an instant settlement system, it is irrevocable and cannot be stopped unilaterally. However, if a transfer is still marked as 'Pending' or was scheduled for a future date, you may cancel it directly within the app before batch dispatch. For completed transfers sent in error or to incorrect beneficiaries, an official Payment Recall request can be initiated through support, though return of funds requires consent from the recipient or their banking institution.",
+    "resolution_steps": [
+      "Open the transfer in your transaction list; if a 'Cancel Transfer' button is visible, tap it immediately.",
+      "If the status is 'Completed', contact the recipient directly and request a refund.",
+      "If the recipient is unknown or unresponsive, initiate a 'Payment Recall' via support chat.",
+      "Be aware that recall investigations can take several weeks and recovery is not legally guaranteed."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Transfer recall protocols adhere to standard interbank clearing rules.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TOPUP-001",
+    "title": "Troubleshooting Failed, Declined, or Reverted Account Top-Ups",
+    "category_group": "Top-Ups & Deposits",
+    "summary": "Diagnosing why debit/credit card top-ups or auto-funding rules fail or revert.",
+    "relevant_intents": [
+      "top_up_failed",
+      "top_up_reverted",
+      "topping_up_by_card",
+      "automatic_top_up"
+    ],
+    "tags": ["top up failed", "reverted top up", "card funding", "auto top up", "3ds challenge"],
+    "content": "Account top-ups using an external debit or credit card may fail due to 3D Secure (3DS) authentication timeouts, external bank anti-fraud blocks, card expiration, or exceeding top-up limits. When a top-up reverts, the temporary pre-authorization hold on your funding card is released back to your issuing bank. Auto-top-up features will automatically pause if three consecutive funding attempts fail to prevent repeated merchant charges on your external account.",
+    "resolution_steps": [
+      "Ensure your external card supports 3D Secure / two-factor authorization challenges.",
+      "Contact your external bank to verify they are not blocking the transaction as high-risk.",
+      "Verify that the card funding details (CVV, expiration date, billing zip/postal code) are accurate.",
+      "If auto top-up paused, re-authenticate your linked card in 'Add Money' settings."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Educational top-up troubleshooting. Pre-authorization hold releases vary by external card issuer.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TOPUP-002",
+    "title": "Managing Account Funding Limits and Pending Top-Up Delays",
+    "category_group": "Top-Ups & Deposits",
+    "summary": "Information on daily and annual funding thresholds and managing pending top-up clearances.",
+    "relevant_intents": [
+      "top_up_limits",
+      "pending_top_up"
+    ],
+    "tags": ["top up limits", "funding limit", "pending top up", "account tiers", "deposit limit"],
+    "content": "Every account operates under rolling daily and annual deposit limits based on identity verification level and regulatory requirements. If you attempt a deposit that exceeds your current tier, the top-up will be declined or placed in a 'Pending' verification status while compliance documentation is reviewed. To increase your deposit ceiling, you can submit source-of-wealth documentation such as a payslip, tax return, or bank statement through the app's verification center.",
+    "resolution_steps": [
+      "Check your remaining daily and annual top-up allowances in 'Profile' > 'Limits'.",
+      "If a top-up is pending, do not initiate duplicate attempts to avoid unexpected multiple debits.",
+      "To request a limit increase, tap 'Increase Limits' and upload the requested income documentation.",
+      "Wait for standard compliance review, which typically completes within 1 to 2 business days."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Illustrative deposit tier governance. Limits are determined by risk assessment.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-TOPUP-003",
+    "title": "Cash and Cheque Deposit Processing and Crediting Delays",
+    "category_group": "Top-Ups & Deposits",
+    "summary": "Procedures for depositing cash or cheques and troubleshooting delayed balance credits.",
+    "relevant_intents": [
+      "top_up_by_cash_or_cheque",
+      "balance_not_updated_after_cheque_or_cash_deposit",
+      "verify_top_up"
+    ],
+    "tags": ["cash deposit", "cheque deposit", "balance update", "deposit clearing", "clearing delay"],
+    "content": "Deposits made via partner retail locations or digital cheque scanning require clearing verification before funds are credited to your active spend balance. Cheques undergo image processing, signature verification, and interbank presentment, which typically takes 2 to 4 business days. Cash deposited at partner terminals normally updates within several hours. If your deposit was completed at a merchant or ATM and your receipt was issued but the balance has not reflected after the standard window, an investigation can be opened.",
+    "resolution_steps": [
+      "Retain your original deposit receipt or the physical cheque until funds are confirmed settled.",
+      "Verify the cheque clearing date: cheques deposited after daily cut-off times begin processing the next business day.",
+      "If prompted in the app, complete any pending 'Verify Top-Up' identity checks.",
+      "If balance remains uncredited after 4 business days, submit a photo of your receipt to support."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Cheque and cash clearing timelines conform to standard interbank rules.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-SEC-001",
+    "title": "App Passcode Recovery, Biometric Lockouts, and Lost Phone Protocol",
+    "category_group": "Account Security",
+    "summary": "Steps to reset your forgotten mobile passcode and protect your account if your mobile device is lost or stolen.",
+    "relevant_intents": [
+      "passcode_forgotten",
+      "lost_or_stolen_phone"
+    ],
+    "tags": ["passcode reset", "forgot passcode", "lost phone", "biometrics", "device security", "lockout"],
+    "content": "If you forget your 6-digit mobile app passcode or biometric login fails, you can initiate a secure passcode reset from the login screen. You will be prompted to verify your registered email address, enter an SMS confirmation code, and take a secure selfie to match against your identity verification records. If your smartphone has been lost or stolen, contact our automated support line or web portal immediately to unlink the lost device and suspend active mobile app sessions, preventing unauthorized access.",
+    "resolution_steps": [
+      "On the app login screen, tap 'Forgot Passcode?' to begin identity reverification.",
+      "Enter your registered email address to receive a secure authentication link.",
+      "Complete the video selfie verification in adequate lighting without hats or sunglasses.",
+      "If your device is lost or stolen, access the emergency web portal to revoke all active sessions immediately."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Security credentials recovery protocol. Requires valid identity documentation.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-SEC-002",
+    "title": "Identity Verification (KYC) Guidance and Source of Funds Verification",
+    "category_group": "Account Security",
+    "summary": "Why identity verification is mandatory, how to resolve document rejections, and source-of-funds compliance.",
+    "relevant_intents": [
+      "verify_my_identity",
+      "unable_to_verify_identity",
+      "why_verify_identity",
+      "verify_source_of_funds"
+    ],
+    "tags": ["identity verification", "kyc", "source of funds", "document rejection", "compliance", "passport", "id card"],
+    "content": "Banking regulations mandate Know-Your-Customer (KYC) compliance to combat financial fraud, identity theft, and money laundering. All customers must provide valid government-issued photo identification (Passport, National ID, or Driving Licence) and a live selfie. Documents may be rejected if the image is blurry, expired, has glare over key data fields, or if details do not match the registered account profile. For high-volume accounts, regulations also require periodic verification of source of funds.",
+    "resolution_steps": [
+      "Ensure your identity document is currently valid, unexpired, and undamaged.",
+      "Capture photos in a well-lit environment, ensuring all four corners of the document are visible without glare.",
+      "Check that your full legal name on the document matches your account profile exactly.",
+      "If requested for Source of Funds, provide a recent payslip, tax assessment, or sale of property contract."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Regulatory compliance requirements. Document acceptance criteria follow financial laws.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-SEC-003",
+    "title": "Updating Personal Details, Eligibility Requirements, and Account Closure",
+    "category_group": "Account Security",
+    "summary": "Procedures for updating residential address or phone number, age requirements, and terminating an account.",
+    "relevant_intents": [
+      "edit_personal_details",
+      "terminate_account",
+      "age_limit"
+    ],
+    "tags": ["personal details", "change address", "phone update", "close account", "terminate account", "age limit"],
+    "content": "Keeping your contact details current ensures you receive security notices and replacement cards. You can update your phone number and email directly in the app with two-factor confirmation; residential address updates may require a supporting proof of address (utility bill or bank statement dated within 3 months). The standard minimum age to open an independent account is 18 years. If you wish to close your account, all sub-accounts must be cleared to zero balance, all pending transactions settled, and all cards frozen.",
+    "resolution_steps": [
+      "To update address: Navigate to 'Profile' > 'Personal Info' > 'Address' and upload proof of residence.",
+      "To update phone number: Verify your new number with the SMS code sent to your registered device.",
+      "Account requirements: Applicants must be at least 18 years of age and reside in a supported jurisdiction.",
+      "To close account: Withdraw or transfer remaining balances to zero, then tap 'Close Account' in Settings."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Standard account administration protocols.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-DISP-001",
+    "title": "Disputing Unrecognized Charges, Double Billings, and Direct Debits",
+    "category_group": "Disputes & Fees",
+    "summary": "How to report fraudulent transactions, investigate duplicate charges, and cancel unauthorized direct debits.",
+    "relevant_intents": [
+      "card_payment_not_recognised",
+      "transaction_charged_twice",
+      "direct_debit_payment_not_recognised",
+      "reverted_card_payment?"
+    ],
+    "tags": ["unrecognized charge", "double billing", "fraud report", "direct debit dispute", "chargeback"],
+    "content": "If you notice an unfamiliar merchant name on your statement, first check if the billing entity operates under a parent trading name or corporate merchant alias. For duplicate transactions (charged twice for the same purchase), one entry is frequently a temporary pre-authorization hold that automatically drops off within 5 to 7 business days. If you confirm the transaction is unauthorized or fraudulent, freeze your card immediately and submit a formal dispute through our in-app resolution center to initiate the chargeback process.",
+    "resolution_steps": [
+      "Tap the suspicious transaction in your feed to view merchant details, location, and billing descriptor.",
+      "If the card details may be compromised, immediately freeze your card to prevent subsequent debits.",
+      "For double charges, check if one transaction is marked 'Pending'; pending pre-authorizations typically revert automatically.",
+      "Select 'Report an Issue' > 'I don't recognize this charge' to submit documentation to the dispute team."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Chargeback and dispute workflows adhere to card network scheme rules.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-DISP-002",
+    "title": "ATM Cash Withdrawal Discrepancies, ATM Declines, and Inquiries",
+    "category_group": "Disputes & Fees",
+    "summary": "Resolving ATM cash dispensing errors, declined withdrawals, and unrecognized ATM withdrawals.",
+    "relevant_intents": [
+      "declined_cash_withdrawal",
+      "wrong_amount_of_cash_received",
+      "cash_withdrawal_not_recognised",
+      "pending_cash_withdrawal",
+      "atm_support"
+    ],
+    "tags": ["atm error", "wrong cash amount", "declined withdrawal", "atm dispute", "atm network"],
+    "content": "When using an ATM, mechanical dispenser faults can occasionally result in incorrect cash dispensed or no cash delivered despite your account balance being debited. In most instances, the ATM host reconciliation system detects the disparity and automatically reverses the debit within 24 to 48 hours. If the debit does not reverse, obtain an ATM discrepancy report by logging the ATM identifier, terminal location, date, time, and exact amount dispensed versus requested.",
+    "resolution_steps": [
+      "Always retain any printed ATM transaction receipt or error slip issued by the terminal.",
+      "Wait 24 hours for automated ATM end-of-day electronic reconciliation to reverse any unsettled hold.",
+      "If the incorrect balance remains settled after 48 hours, navigate to the transaction and tap 'Report ATM Error'.",
+      "Provide terminal machine number, operator bank name, physical location, and discrepancy details."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Interbank ATM dispute resolution process. Subject to ATM operator audit logs.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-DISP-003",
+    "title": "Foreign Exchange Rates, In-App Currency Conversions, and Supported FX",
+    "category_group": "Disputes & Fees",
+    "summary": "Understanding interbank exchange rates, weekend rate markups, and multi-currency balances.",
+    "relevant_intents": [
+      "exchange_rate",
+      "exchange_via_app",
+      "fiat_currency_support",
+      "supported_cards_and_currencies",
+      "country_support"
+    ],
+    "tags": ["exchange rate", "currency exchange", "forex", "fiat currency", "fx conversion", "multi currency"],
+    "content": "Our platform offers currency conversion using real-time interbank foreign exchange rates during global market hours (Monday through Friday). On weekends and market holidays, international currency markets close, and a standard weekend markup is applied to hedge against market volatility opening risk. You can hold balances and exchange between major supported currencies directly within the app before traveling, or allow the card to auto-convert at point of sale using the current live exchange rate.",
+    "resolution_steps": [
+      "Check live rates in the app under 'Exchange' before confirming any currency conversion.",
+      "To avoid weekend volatility fees, convert your funds into target currencies during weekday market hours.",
+      "When paying abroad at a card terminal, always choose to be billed in the local currency rather than your home currency to avoid Dynamic Currency Conversion (DCC) markups.",
+      "Review supported regional currencies under 'Account' > 'Supported Currencies'."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Illustrative foreign exchange policy. Market rates fluctuate continuously.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-DISP-004",
+    "title": "Understanding Banking Fees, Surcharges, and Fee Inquiries",
+    "category_group": "Disputes & Fees",
+    "summary": "Explanations of international transaction fees, ATM operator surcharges, transfer fees, and statement charges.",
+    "relevant_intents": [
+      "transfer_fee_charged",
+      "card_payment_fee_charged",
+      "cash_withdrawal_charge",
+      "top_up_by_card_charge",
+      "top_up_by_bank_transfer_charge",
+      "exchange_charge",
+      "card_payment_wrong_exchange_rate",
+      "wrong_exchange_rate_for_cash_withdrawal",
+      "extra_charge_on_statement"
+    ],
+    "tags": ["fees", "extra charges", "atm fees", "transfer fee", "exchange fee", "statement charge"],
+    "content": "Account holders can review all applicable fees directly in our fee schedule under Account Settings. Common fees include third-party ATM owner surcharges (fees charged by the independent ATM operator, not our bank), intermediary correspondent bank deductions on SWIFT international transfers, and credit card funding processing surcharges. If you notice an extra fee on your statement, inspect the fee breakdown on the transaction detail page to determine whether it was assessed by our platform, an intermediary clearing bank, or the merchant.",
+    "resolution_steps": [
+      "Tap the transaction on your statement to view the itemized fee breakdown.",
+      "Identify whether the charge originated from an independent ATM operator or merchant surcharge.",
+      "Check if your account exceeded the monthly free allowance for international withdrawals or FX transfers.",
+      "If a fee appears to have been charged in error contrary to your account plan, request a review via support."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Standard fee transparency reference. Exact pricing conforms to published account tier schedules.",
+    "helpful_count": 0
+  },
+  {
+    "kb_id": "KB-DISP-005",
+    "title": "Merchant Refund Processing Timelines and Tracing Missing Credits",
+    "category_group": "Disputes & Fees",
+    "summary": "How merchant returns are credited, understanding processing delays, and tracking missing refunds.",
+    "relevant_intents": [
+      "request_refund",
+      "Refund_not_showing_up",
+      "pending_card_payment"
+    ],
+    "tags": ["refund", "merchant refund", "missing refund", "return", "acquirer clearing"],
+    "content": "When a merchant agrees to process a refund for a returned purchase or cancelled service, the credit passes through the merchant's acquiring bank, the card network (Visa/Mastercard), and our processing host. This multi-party settlement workflow standardly takes between 5 to 10 business days from the moment the merchant generates the refund transaction. Until the acquirer transmits the final settlement message, our systems cannot see or expedite the pending funds.",
+    "resolution_steps": [
+      "Request a formal Refund Confirmation receipt or Acquirer Reference Number (ARN) from the merchant.",
+      "Allow 10 full business days from the date of the merchant's confirmation receipt.",
+      "Check your transaction history for the original purchase date; some refunds update the original transaction rather than appearing as a new credit.",
+      "If 10 business days have elapsed and you possess an ARN, submit it to our support team to trace the interbank settlement."
+    ],
+    "disclaimer": "Demo Knowledge-Base Content: Standard card scheme refund clearing procedures.",
+    "helpful_count": 0
+  }
+]

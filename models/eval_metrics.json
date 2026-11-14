@@ -1,0 +1,156 @@
+{
+  "evaluation_timestamp": "2026-11-14T17:54:19.439255",
+  "dataset": "BANKING77",
+  "num_classes": 77,
+  "official_train_size": 10003,
+  "official_test_size": 3080,
+  "validation_split_ratio": 0.2,
+  "selected_preprocessing": "extended",
+  "preprocessing_validation_comparison": {
+    "basic": {
+      "validation_accuracy": 0.8476,
+      "vocab_size": 10000
+    },
+    "extended": {
+      "validation_accuracy": 0.8616,
+      "vocab_size": 10000
+    }
+  },
+  "hyperparameter_tuning": {
+    "logistic_regression": {
+      "0.5": 0.8361,
+      "1.0": 0.8616,
+      "2.0": 0.8741,
+      "5.0": 0.8851,
+      "10.0": 0.8856
+    },
+    "linear_svc": {
+      "0.1": 0.8631,
+      "0.5": 0.8791,
+      "1.0": 0.8786,
+      "2.0": 0.8756
+    }
+  },
+  "models": {
+    "logistic_regression": {
+      "model_name": "Multinomial Logistic Regression",
+      "sample_count": 3080,
+      "accuracy": 0.889,
+      "top_1_accuracy": 0.889,
+      "top_3_accuracy": 0.9711,
+      "macro_f1": 0.8894,
+      "weighted_f1": 0.8894,
+      "latency": {
+        "benchmark_type": "isolated_model_inference (pre-vectorized sparse CSR matrix)",
+        "mean_latency_ms": 0.148,
+        "median_latency_ms": 0.147,
+        "p95_latency_ms": 0.16,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 346170.5
+      },
+      "isolated_inference_latency": {
+        "benchmark_type": "isolated_model_inference (pre-vectorized sparse CSR matrix)",
+        "mean_latency_ms": 0.148,
+        "median_latency_ms": 0.147,
+        "p95_latency_ms": 0.16,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 346170.5
+      },
+      "end_to_end_latency": {
+        "benchmark_type": "end_to_end_pipeline (raw text -> preprocessor -> TF-IDF -> predict_proba)",
+        "mean_latency_ms": 0.599,
+        "median_latency_ms": 0.593,
+        "p95_latency_ms": 0.634,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 9508.2
+      },
+      "top_confused_pairs": [
+        {
+          "true_intent": "virtual_card_not_working",
+          "predicted_intent": "get_disposable_virtual_card",
+          "count": 7
+        },
+        {
+          "true_intent": "why_verify_identity",
+          "predicted_intent": "verify_my_identity",
+          "count": 6
+        },
+        {
+          "true_intent": "verify_my_identity",
+          "predicted_intent": "why_verify_identity",
+          "count": 6
+        },
+        {
+          "true_intent": "unable_to_verify_identity",
+          "predicted_intent": "verify_my_identity",
+          "count": 5
+        },
+        {
+          "true_intent": "request_refund",
+          "predicted_intent": "Refund_not_showing_up",
+          "count": 5
+        }
+      ]
+    },
+    "calibrated_linear_svm": {
+      "model_name": "Calibrated Linear Support Vector Machine (LinearSVC)",
+      "sample_count": 3080,
+      "accuracy": 0.8808,
+      "top_1_accuracy": 0.8808,
+      "top_3_accuracy": 0.9653,
+      "macro_f1": 0.8809,
+      "weighted_f1": 0.8809,
+      "latency": {
+        "benchmark_type": "isolated_model_inference (pre-vectorized sparse CSR matrix)",
+        "mean_latency_ms": 12.769,
+        "median_latency_ms": 12.675,
+        "p95_latency_ms": 13.238,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 4408.2
+      },
+      "isolated_inference_latency": {
+        "benchmark_type": "isolated_model_inference (pre-vectorized sparse CSR matrix)",
+        "mean_latency_ms": 12.769,
+        "median_latency_ms": 12.675,
+        "p95_latency_ms": 13.238,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 4408.2
+      },
+      "end_to_end_latency": {
+        "benchmark_type": "end_to_end_pipeline (raw text -> preprocessor -> TF-IDF -> predict_proba)",
+        "mean_latency_ms": 13.082,
+        "median_latency_ms": 13.082,
+        "p95_latency_ms": 13.671,
+        "batch_size": 64,
+        "batch_throughput_samples_per_sec": 3283.4
+      },
+      "top_confused_pairs": [
+        {
+          "true_intent": "why_verify_identity",
+          "predicted_intent": "verify_my_identity",
+          "count": 7
+        },
+        {
+          "true_intent": "virtual_card_not_working",
+          "predicted_intent": "get_disposable_virtual_card",
+          "count": 6
+        },
+        {
+          "true_intent": "card_arrival",
+          "predicted_intent": "card_delivery_estimate",
+          "count": 5
+        },
+        {
+          "true_intent": "top_up_by_bank_transfer_charge",
+          "predicted_intent": "transfer_fee_charged",
+          "count": 5
+        },
+        {
+          "true_intent": "card_acceptance",
+          "predicted_intent": "card_not_working",
+          "count": 5
+        }
+      ]
+    }
+  }
+}
