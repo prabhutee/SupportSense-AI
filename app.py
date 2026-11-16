@@ -345,7 +345,12 @@ elif page == "Knowledge Base":
         db = get_db()
         kb_repo = KBRepository(db)
 
-        # Fetch articles from MongoDB
+        # Seed Knowledge Base if collection is empty
+        if db["knowledge_base"].count_documents({}) == 0:
+            seeded_count = kb_repo.seed_kb_from_json()
+            st.success(f"Successfully seeded {seeded_count} KB articles!")
+
+            # Fetch articles from MongoDB
         articles = kb_repo.list_articles(limit=100)
 
         if not articles:
