@@ -330,10 +330,55 @@ elif page == "Manage Tickets":
                         st.rerun()
                     else:
                         st.warning("No changes were made to this ticket.")
+                
+                # Delete Ticket
+                confirm_key = f"confirm_delete_{ticket['ticket_id']}"
+
+                if confirm_key not in st.session_state:
+                    st.session_state[confirm_key] = False
+
+                if st.button(
+                    "🗑️ Delete Ticket",
+                    key=f"delete_{ticket['ticket_id']}"
+                ):
+                    st.session_state[confirm_key] = True
+
+                # Ask for confirmation before permanent deletion
+                if st.session_state[confirm_key]:
+                    st.warning(
+                        f"Are you sure you want to permanently delete "
+                        f"ticket {ticket['ticket_id']}?"
+                    )
+
+                    confirm_col, cancel_col = st.columns(2)
+
+                    with confirm_col:
+                        if st.button(
+                            "Yes, Delete Permanently",
+                            key=f"confirm_yes_{ticket['ticket_id']}",
+                            type="primary"
+                        ):
+                            deleted = ticket_repo.delete_ticket(
+                                ticket['ticket_id']
+                            )
+
+                            if deleted:
+                                st.session_state.pop(confirm_key, None)
+                                st.success("Ticket deleted successfully!")
+                                st.rerun()
+                            else:
+                                st.error("Ticket could not be deleted.")
+
+                    with cancel_col:
+                        if st.button(
+                            "Cancel",
+                            key=f"confirm_no_{ticket['ticket_id']}"
+                        ):
+                            st.session_state[confirm_key] = False
+                            st.rerun()
 
     except Exception as error:
         st.error(f"Unable to load tickets: {error}")
-
 
 
 elif page == "Knowledge Base":
